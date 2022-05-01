@@ -33,8 +33,8 @@ driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='../chr
 # driver.add_cookie(json.loads(cooki))
 driver.get("https://www.educative.io/")
 driver.find_element_by_xpath('//button[text()="Log In"]').click()
-driver.find_element_by_name("email").send_keys("buyshanxi@gmail.com")
-driver.find_element_by_name("password").send_keys("Buptdby1987$")
+driver.find_element_by_name("email").send_keys("")
+driver.find_element_by_name("password").send_keys("")
 driver.find_element_by_xpath('//button[text()="Log In"]').click()
 pickle.dump(driver.get_cookies() , open("cookies.pkl","wb"))
 

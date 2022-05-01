@@ -1,6 +1,6 @@
 
 
-CHROMEDRIVER_PATH=''
+CHROMEDRIVER_PATH = 'D:\\code\\edu_io_crawl\\chromedriver.exe'
 
-user_name = ''
+email = ''
 passwd = ''

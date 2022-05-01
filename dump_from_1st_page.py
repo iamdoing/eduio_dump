@@ -13,12 +13,15 @@ def recurse_dump_from_1st(first_page_url, driver):
     driver.get(first_page_url)
     time.sleep(5 + random.randint(0, 10))
     driver.execute_script('window.print();')
+    ct = 1
     while True:
         try:
             time.sleep(5 + random.randint(0, 10))
             driver.find_element_by_xpath('//button[text()="Next"]').click()
             time.sleep(5 + random.randint(10, 16))
             driver.execute_script('window.print();')
+            print(f'No. {ct} Page Dumped')
+            ct += 1
         except:
             print('Finished, if not, start from current page and run again')
             break

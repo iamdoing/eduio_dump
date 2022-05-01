@@ -1,6 +1,8 @@
 
+import json
 from selenium import webdriver
-from cfg import CHROMEDRIVER_PATH
+
+import cfg
 
 def gen_print_driver():
     chrome_options = webdriver.ChromeOptions()
@@ -16,5 +18,5 @@ def gen_print_driver():
     prefs = {'printing.print_preview_sticky_settings.appState': json.dumps(settings)}
     chrome_options.add_experimental_option('prefs', prefs)
     chrome_options.add_argument('--kiosk-printing')
-    CHROMEDRIVER_PATH = '/usr/local/bin/chromedriver'
-    driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=CHROMEDRIVER_PATH)
+    driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=cfg.CHROMEDRIVER_PATH)
+    return driver
