@@ -31,7 +31,7 @@ def recurse_dump_from_1st(first_page_url, driver):
 def main(args=None):
     first_page_url = 'https://www.educative.io/courses/distributed-systems-practitioners/R8XGr1R1qRz'
     driver = driver_utils.gen_print_driver()
-    driver = login_utils.log_in(driver, cfg.email, cfg.passwd, dump_cookie=True, resume=True)
+    driver = login_utils.log_in(driver, cfg.email, cfg.passwd, dump_cookie=True, resume=False)
     recurse_dump_from_1st(first_page_url, driver)
 
 

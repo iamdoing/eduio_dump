@@ -6,6 +6,7 @@ Ref here https://chromedriver.chromium.org/downloads
 
 1. Env setup
 ```
+# Python ~= 3.8.8
 pip install -r requirements
 ```
 2. Set cfg
@@ -19,6 +20,7 @@ passwd: account password
 
 ```
 python dump_from_1st_page.py
+# resume: no need to login again (use coookie)  default is False
 ```
 
 ## Note:
